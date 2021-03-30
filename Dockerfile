@@ -1,7 +1,5 @@
 FROM registry.access.redhat.com/ubi8/nodejs-12
 
-CMD [ "npm", "start" ]
-
 RUN mkdir app
 
 WORKDIR app
@@ -13,3 +11,5 @@ COPY src/package*.json ./
 RUN npm ci
 
 COPY src .
+
+CMD [ "npm", "start" ]
